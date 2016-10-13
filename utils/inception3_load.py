@@ -99,7 +99,7 @@ def model(x, googlenet, H):
         early_loss_layers = ['head0', 'nn0', 'softmax0', 'head1', 'nn1', 'softmax1', 'output1']
         return any(name.startswith(prefix) for prefix in early_loss_layers)
 
-    print weight_tensors
+
     T = weight_tensors
     T[input_op.name] = x
 
