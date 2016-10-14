@@ -16,6 +16,7 @@ python train.py --hypes hypes/overfeat_rezoom.json --gpu 0 --logdir output
 
 // Using tensorboard for Visualization of the training
  tensorboard --logdir output
+ (ps aux | grep tensorboard)
 
 
 
