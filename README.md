@@ -26,3 +26,12 @@ python train.py --hypes hypes/overfeat_rezoom.json --gpu 0 --logdir output
  ./labels #containig the txt files containing labels for corresponding image
 
  2. Generate jason file
+
+
+bazel build tensorflow/python/tools:strip_unused
+
+bazel-bin/tensorflow/python/tools/strip_unused \
+--input_graph=/home/shangliy/models/inception3_10_13_1050.pb \
+--output_graph=/home/shangliy/models/inception3_stripped_graph.pb \
+--input_node_names=sub
+--output_node_names=output

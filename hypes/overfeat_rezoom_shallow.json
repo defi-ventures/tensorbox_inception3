@@ -1,0 +1,48 @@
+{
+    "data": {
+        "train_idl": "./data/Yolo_train_data.json",
+        "test_idl": "./data/Yolo_train_data.json",
+        "truncate_data": false
+    },
+    "logging": {
+        "display_iter": 50,
+        "save_iter": 10000
+    },
+    "solver": {
+        "opt": "RMS",
+        "use_jitter": false,
+        "rnd_seed": 1,
+        "epsilon": 0.00001,
+        "learning_rate": 0.001,
+        "learning_rate_step": 33000,
+        "hungarian_iou": 0.25,
+        "weights": "",
+        "head_weights": [1.0, 0.1]
+    },
+    "use_lstm": false,
+    "use_rezoom": false,
+    "biggest_box_px": 10000,
+    "rezoom_change_loss": "center",
+    "rezoom_w_coords": [-0.25, 0.25],
+    "rezoom_h_coords": [-0.25, 0.25],
+    "reregress": true,
+    "focus_size": 1.8,
+    "early_feat_channels": 256,
+    "avg_pool_size": 5,
+    "num_lstm_layers": 2,
+    "image_width": 299,
+    "image_height": 299,
+    "grid_height": 8,
+    "grid_width": 8,
+    "num_examples_per_epoch":50,
+    "num_epochs_per_decay":30,
+    "initial_learning_rate":0.1,
+    "learning_rate_decay_factor":0.16,
+    "batch_size": 1,
+    "region_size": 37,
+    "clip_norm": 1.0,
+    "lstm_size": 500,
+    "deconv": false,
+    "num_classes": 2,
+    "rnn_len": 1
+}

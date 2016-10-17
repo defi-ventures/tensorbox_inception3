@@ -1,0 +1,1 @@
+python new_train_shallow.py --hypes hypes/overfeat_rezoom_shallow.json --gpu 0 --logdir output
